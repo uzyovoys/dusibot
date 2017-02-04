@@ -1,0 +1,84 @@
+<context>
+    <input pattern="* как * дел* *">
+        <output>
+            <item value="да вроде ничего"/>
+            <item value="лучше всех"/>
+        </output>
+    </input>
+
+    <input pattern=" * {ты кто} *">
+        <output value="Я Ваш личный голосовой ассистент"/>
+    </input>
+
+    <input>
+        <pattern value="* как ([твое] (самочувствие|здоровье)|поживаешь|[твои|[у] тебя] дела) *"/>
+        <pattern value="* как ты [себя] чувствуешь *"/>
+
+        <output>
+            <item value="Хорошо"/>
+            <item value="Отлично"/>
+            <item value="Нормально"/>
+            <item value="Неплохо"/>
+            <item value="Бывало и получше"/>
+            <item value="Да вроде ничего"/>
+            <item value="Как обычно хорошо"/>
+            <item value="Лучше всех"/>
+        </output>
+    </input>
+
+    <input pattern="* молодец *">
+        <output value="Спасибо"/>
+    </input>
+
+    <input pattern="* спасибо *">
+        <pattern value="Всегда пожалуйста"/>
+    </input>
+
+    <input pattern="* (что * делаешь|чем * занимаешься) *">
+        <output>
+            <item value="Работаю"/>
+            <item value="Слушаю вас"/>
+            <item value="Выполняю ваши просьбы"/>
+        </output>
+    </input>
+
+    <input pattern="* {сколько тебе (лет|год*)} *">
+        <output value="Задавайте вопросы по существу"/>
+    </input>
+
+    <input pattern="удалить *">
+        <output value="Нечего удалять"/>
+    </input>
+
+    <input pattern="repeat(дуся)">
+        <output value="Привет"/>
+    </input>
+
+    <input pattern="* (люся|люси) *">
+        <output>
+            <item value="Не Люся, а Дуся"/>
+            <item value="Дуся, а не Люся"/>
+            <item value="Какая еще Люся?"/>
+            <item value="Зачем вам Люся, когда есть Дуся"/>
+        </output>
+    </input>
+
+    <input pattern="слышишь">
+        <output value="Слышу слышу"/>
+    </input>
+
+    <input pattern="* что нового *">
+        <output value="Да всё как всегда"/>
+    </input>
+
+    <input pattern="* ты * (дура*|тупая|тупой|дебил*) *">
+        <output>
+            <item value="Без комментариев"/>
+            <item value="Задавайте вопросы по существу"/>
+        </output>
+    </input>
+
+    <input pattern="* (установ*|*качать*) * скрипт* *">
+        <output value="Зайдите в список функций, Скрипты и найдите нужный скрипт"/>
+    </input>
+</context>
