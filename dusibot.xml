@@ -1,16 +1,4 @@
 <context>
-    <input pattern="* как * дел* *">
-        <output>
-            <item value="Да вроде ничего. А как у вас?"/>
-            <item value="Лучше всех. А Ваши как?"/>
-        </output>
-        <context modal="true">
-            <input pattern="* (хорош*|отличн*|нормальн*|норма|норме) *">
-                <output value="Здорово!"/>
-            </input>
-        </context>    
-    </input>
-
     <input pattern=" * {ты кто} *">
         <output value="Я Ваш личный голосовой ассистент"/>
     </input>
@@ -20,15 +8,21 @@
         <pattern value="* как ты [себя] чувствуешь *"/>
 
         <output>
-            <item value="Хорошо"/>
-            <item value="Отлично"/>
-            <item value="Нормально"/>
-            <item value="Неплохо"/>
-            <item value="Бывало и получше"/>
-            <item value="Да вроде ничего"/>
-            <item value="Как обычно хорошо"/>
-            <item value="Лучше всех"/>
+            <item value="Хорошо. А Вы как?"/>
+            <item value="Отлично. А как Вы?"/>
+            <item value="Нормально. А Вы как?"/>
+            <item value="Неплохо. А Вы как?"/>
+            <item value="Бывало и получше. А у Вас как?"/>
+            <item value="Да вроде ничего. А Вы?"/>
+            <item value="Как обычно хорошо. А у Вас?"/>
+            <item value="Лучше всех. А как Вы поживаете?"/>
         </output>
+        
+        <context modal="true">
+            <input pattern="* (хорош*|отличн*|нормальн*|норма|норме) *">
+                <output value="Здорово!"/>
+            </input>
+        </context>
     </input>
 
     <input pattern="* молодец *">
