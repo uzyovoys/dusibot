@@ -1,9 +1,14 @@
 <context>
     <input pattern="* как * дел* *">
         <output>
-            <item value="да вроде ничего"/>
-            <item value="лучше всех"/>
+            <item value="Да вроде ничего. А как у вас?"/>
+            <item value="Лучше всех. А Ваши как?"/>
         </output>
+        <context modal="true">
+            <input pattern="* (хорош*|отличн*|нормальн*|норма|норме) *">
+                <output value="Здорово!"/>
+            </input>
+        </context>    
     </input>
 
     <input pattern=" * {ты кто} *">
