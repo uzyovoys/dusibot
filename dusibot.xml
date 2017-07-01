@@ -2,6 +2,10 @@
     <input pattern=" * {ты кто} *">
         <output value="Я Ваш личный голосовой ассистент"/>
     </input>
+    
+    <input pattern="* хочу * *есть *">
+        <var name="command" value="ближайшее кафе"/>
+    </input>    
 
     <input>
         <pattern value="* как ([твое] (самочувствие|здоровье)|поживаешь|[твои|[у] тебя] дела) *"/>
