@@ -23,6 +23,7 @@
         </output>
         
         <context modal="true">
+            <sample value="Отлично"/>
             <input pattern="* (хорош*|отличн*|нормальн*|норма|норме) *">
                 <output value="Здорово!"/>
             </input>
