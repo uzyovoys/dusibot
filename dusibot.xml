@@ -1,33 +1,32 @@
 <context>
+    <input>
+        <pattern value="repeat([дуся|всем] (привет|здравствуй*) [дуся])"/>
+
+        <output>
+            <item value="Привет"/>
+            <item value="Привет привет"/>
+            <item value="Здравствуйте"/>
+        </output>
+    </input>
+
     <input pattern=" * {ты кто} *">
         <output value="Я Ваш личный голосовой ассистент"/>
     </input>
-    
-    <input pattern="* хочу * *есть *">
-        <var name="command" value="ближайшее кафе"/>
-    </input>    
 
     <input>
         <pattern value="* как ([твое] (самочувствие|здоровье)|поживаешь|[твои|[у] тебя] дела) *"/>
         <pattern value="* как ты [себя] чувствуешь *"/>
 
         <output>
-            <item value="Хорошо. А Вы как?"/>
-            <item value="Отлично. А как Вы?"/>
-            <item value="Нормально. А Вы как?"/>
-            <item value="Неплохо. А Вы как?"/>
-            <item value="Бывало и получше. А у Вас как?"/>
-            <item value="Да вроде ничего. А Вы?"/>
-            <item value="Как обычно хорошо. А у Вас?"/>
-            <item value="Лучше всех. А как Вы поживаете?"/>
+            <item value="Хорошо"/>
+            <item value="Отлично"/>
+            <item value="Нормально"/>
+            <item value="Неплохо"/>
+            <item value="Бывало и получше"/>
+            <item value="Да вроде ничего"/>
+            <item value="Как обычно хорошо"/>
+            <item value="Лучше всех"/>
         </output>
-        
-        <context modal="true">
-            <sample value="Отлично"/>
-            <input pattern="* (хорош*|отличн*|нормальн*|норма|норме) *">
-                <output value="Здорово!"/>
-            </input>
-        </context>
     </input>
 
     <input pattern="* молодец *">
@@ -75,6 +74,16 @@
         <output value="Да всё как всегда"/>
     </input>
 
+    <input>
+        <pattern value="[* ты] молодец"/>
+        <pattern value="будь здоров*"/>
+        <output value="Спасибо"/>
+    </input>
+
+    <input pattern="* {спасибо [тебе] [дуся]}">
+        <output value="Всегда пожалуйста"/>
+    </input>
+
     <input pattern="* ты * (дура*|тупая|тупой|дебил*) *">
         <output>
             <item value="Без комментариев"/>
@@ -82,7 +91,7 @@
         </output>
     </input>
 
-    <input pattern="* (установ*|*качать*) * скрипт* *">
-        <output value="Зайдите в список функций, Скрипты и найдите нужный скрипт"/>
+    <input pattern="[[я] хочу | *кача*] (порн* | обои) *">
+        <output value="Это не входит в мои функции"/>
     </input>
 </context>

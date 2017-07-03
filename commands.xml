@@ -1,0 +1,9 @@
+<context>
+    <pattern name="PlaceType">
+        <pattern value="(есть|поесть|*кушать):кафе"/>
+    </pattern>
+
+    <input pattern="* хочу * $PlaceType *">
+        <var name="command" value="ближайшее $PlaceType"/>
+    </input>
+</context>
